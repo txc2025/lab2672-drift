@@ -34,7 +34,7 @@ resource "aws_instance" "lab1-vm1" {
   tags          = merge(local.common_tags, local.lifecycle_tags)
 
   lifecycle {
-    ignore_changes = [tags, tags_all]
+    ignore_changes = [tags, tags_all, ami]
   }
 }
 
